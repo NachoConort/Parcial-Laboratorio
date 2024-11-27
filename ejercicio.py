@@ -13,8 +13,6 @@ def mostrar_informacion_alumno():
         st.markdown('**Nombre:** Ignacio Conort')
         st.markdown('**Comisión:** C7')
 
-mostrar_informacion_alumno()
-
 def cargarArchivo(archivo):
     try:
         dataProductos = pd.read_csv(archivo)
@@ -108,6 +106,7 @@ def app():
         else:
             st.error("No se pudo cargar el archivo correctamente.")
     else:
+        mostrar_informacion_alumno()
         st.info("Por favor, sube un archivo CSV para comenzar el análisis.")
 
 if __name__ == '__main__':
